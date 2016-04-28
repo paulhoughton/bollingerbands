@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bollinger Bands</title>
+    <style>
+      body {
+        font: 18px sans-serif;
+      }
+      svg {
+        font: 10px sans-serif;
+      }
+      .line {
+        fill: none;
+        stroke: navy;
+        stroke-width: 1.5px;
+      }
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+      }
+      .axis .tick line {
+        stroke: rgba(0, 0, 0, 0.1);
+      }
+      .bands {
+        stroke: #aaa;
+      }
+      .area {
+        fill: rgba(0, 0, 0, 0.1);
+      }
+      div {
+        display:inline-block;
+        padding-right: 2rem;
+      }
+      select,input {
+        display:block
+      }
+  </style>
+  <body>
+    <div>Stock
+    <input type="text" placeholder="e.g. AAPL, NFLX, MSFT" id="stockInput"/>
+    </div>
+    <div>Moving average period
+      <select id="maPeriod"><option>40</option><option selected>20</option><option>10</option><option>5</option></select>
+    </div>
+    <div>STD DEV
+    <select id="stddev"><option>4</option><option selected>2</option><option>1</option></select>
+    </div>
+    <svg width="960" height="500">
+      <g transform="translate(50,20)">
+        <g class="y axis">
+          <text transform="rotate(-90)" y="6" dy=".71em" style="text-anchor: end;"></text>
+        </g>
+        <g class="x axis" transform="translate(0,450)"></g>
+        <path class="area bands"></path>
+        <path class="line ma bands"></path>
+        <path class="line close"></path>
+      </g>
+    </svg>
+
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://npmcdn.com/fetch-jsonp@1.0.0"></script>
+    <script src="app.js"></script>
+  </body>
+  </html>
