@@ -1,0 +1,41 @@
+{
+  "name": "bollingerbands",
+  "version": "1.0.0",
+  "description": "Bollinger Bands chart",
+  "main": "app.js",
+  "scripts": {
+    "start": "rollup -w -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulhoughton/bollingerbands.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulhoughton/bollingerbands/issues"
+  },
+  "homepage": "https://github.com/paulhoughton/bollingerbands#readme",
+  "devDependencies": {
+    "@types/d3-array": "^1.0.5",
+    "@types/d3-axis": "^1.0.5",
+    "@types/d3-scale": "^1.0.4",
+    "@types/d3-selection": "^1.0.4",
+    "@types/d3-shape": "^1.0.5",
+    "@types/d3-time-format": "^2.0.4",
+    "@types/d3-transition": "^1.0.5",
+    "rollup": "^0.36.3",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-typescript": "^0.8.1"
+  },
+  "dependencies": {
+    "d3-array": "^1.0.1",
+    "d3-axis": "^1.0.3",
+    "d3-scale": "^1.0.3",
+    "d3-selection": "^1.0.2",
+    "d3-shape": "^1.0.3",
+    "d3-time-format": "^2.0.2",
+    "d3-transition": "^1.0.2"
+  }
+}
